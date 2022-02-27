@@ -2,7 +2,7 @@
 
 ### Duration
 
-12 Hour Sprint
+12 Hour Sprint 
 
 
 ## Description
