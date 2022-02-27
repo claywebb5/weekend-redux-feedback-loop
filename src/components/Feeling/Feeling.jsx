@@ -15,13 +15,15 @@ function Feeling() {
 
     //=========<CLICK HANDLER>==============================
     const handleSubmit = (event) => {
-        event.preventDefault();
+        if (feelingRank >= 1 && feelingRank <= 5) {
+            dispatch({
+                type: 'FEELING',
+                payload: feelingRank 
+            })
         history.push('/Understanding');
-        console.log('Next button clicked in Feeling');
-        dispatch({
-            type: 'FEELING',
-            payload: feelingRank 
-        })
+        } else {
+            alert('Please fill in required fields.')
+        }        
     }
 
     return(
@@ -36,7 +38,7 @@ function Feeling() {
                 <input
                     required
                     type='text'
-                    placeholder='Rank 1-5'
+                    placeholder='* Required'
                     value={feelingRank}
                     onChange={(event) => setFeelingRank(event.target.value)}
                 />

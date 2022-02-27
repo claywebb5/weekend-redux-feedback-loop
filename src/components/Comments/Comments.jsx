@@ -31,9 +31,8 @@ function Comments() {
             <div>
                 <label>Comments</label>
                 <input
-                    required
                     type='text'
-                    placeholder='Comments'
+                    placeholder='Optional'
                     value={comments}
                     onChange={(event) => setComments(event.target.value)}
                 />
