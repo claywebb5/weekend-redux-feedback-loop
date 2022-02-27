@@ -7,6 +7,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 //=============<IMPORT COMPONENTS>====================================}
 
 
@@ -31,6 +32,10 @@ function App() {
           {/*======<COMMENTS ROUTE>==============*/}
         <Route exact path='/Comments'>
           <Comments />
+        </Route>
+          {/*======<REVIEW ROUTE>==============*/}
+        <Route exact path='/Review'>
+          <Review />
         </Route>
     {/*----------------------<END ROUTES>----------------------------*/}
       </Router>
