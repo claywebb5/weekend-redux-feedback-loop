@@ -14,13 +14,15 @@ function Understanding() {
 
     //=========<CLICK HANDLER>==============================
     const handleSubmit = (event) => {
-        event.preventDefault();
-        history.push('/Support');
-        console.log('Next button clicked in Understanding');
-        dispatch({
-            type: 'UNDERSTANDING',
-            payload: understandingRank 
-        })
+        if (understandingRank >= 1 && understandingRank <= 5) {
+            dispatch({
+                type: 'UNDERSTANDING',
+                payload: understandingRank 
+            })
+            history.push('/Support');
+        } else {
+            alert('Please fill in required fields.')
+        }
     }
 
 
@@ -36,7 +38,7 @@ function Understanding() {
                 <input
                         required
                         type='text'
-                        placeholder='Rank 1-5'
+                        placeholder='* Required'
                         value={understandingRank}
                         onChange={(event) => setUnderstandingRank(event.target.value)}
                     />
