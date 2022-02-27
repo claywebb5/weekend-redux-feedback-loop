@@ -14,13 +14,15 @@ function Support() {
 
     //=========<CLICK HANDLER>==============================
     const handleSubmit = (event) => {
-        event.preventDefault();
-        history.push('/Comments');
-        console.log('Next button clicked in Support');
-        dispatch({
-            type: 'SUPPORT',
-            payload: supportRank
-        })
+        if (supportRank >= 1 && supportRank <= 5) {
+            dispatch({
+                type: 'SUPPORT',
+                payload: supportRank
+            })
+            history.push('/Comments');
+        } else {
+            alert('Please fill in required fields.')
+        }
     }
 
     return(
@@ -35,7 +37,7 @@ function Support() {
                 <input
                     required
                     type='text'
-                    placeholder='Rank 1-5'
+                    placeholder='* Required'
                     value={supportRank}
                     onChange={(event) => setSupportRank(event.target.value)}
                 />
