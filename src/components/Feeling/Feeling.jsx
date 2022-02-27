@@ -2,7 +2,7 @@
 import Header from '../Header/Header';
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import {useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux';
 
 
 function Feeling() {
@@ -14,7 +14,7 @@ function Feeling() {
     const dispatch = useDispatch();
 
     //=========<CLICK HANDLER>==============================
-    function handleSubmit(event){
+    const handleSubmit = (event) => {
         event.preventDefault();
         history.push('/Understanding');
         console.log('Next button clicked in Feeling');
