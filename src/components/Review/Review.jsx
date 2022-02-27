@@ -13,8 +13,8 @@ function Review() {
      //=========<CLICK HANDLER>==============================
      const handleSubmit = (event) => {
         event.preventDefault();
-        history.push('/');
-        console.log('Next button clicked in Review');
+        history.push('/ThankYou');
+        console.log('Submit Feedback button clicked in Review');
     }
 
     return(
