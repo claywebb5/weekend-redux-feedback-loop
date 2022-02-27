@@ -12,7 +12,6 @@ import ThankYou from '../ThankYou/ThankYou';
 //=============<IMPORT COMPONENTS>====================================}
 
 
-
 function App() {
 
   return (
