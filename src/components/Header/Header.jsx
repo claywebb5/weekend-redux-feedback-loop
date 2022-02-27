@@ -1,4 +1,4 @@
-import './App.css'; // For header tag styling
+import '../App/App'; // For header tag styling
 
 function Header() {
 
