@@ -31,7 +31,8 @@ function Review() {
     const handleSubmit = (event) => {
         event.preventDefault();
         history.push('/ThankYou');
-        addFeedback(); // Call POST function
+        // Call POST function
+        addFeedback(); 
         console.log('Submit Feedback button clicked in Review');
     };
 
